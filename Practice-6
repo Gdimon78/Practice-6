@@ -1,0 +1,77 @@
+1. 
+def nested_sum(t): 
+b=0 
+for i in range(len(t)): 
+a=sum(t[i]) 
+b+=a 
+return b 
+2. 
+def cumsum(t): 
+a=[] 
+s=[] 
+for n in range(len(t)): 
+s.append(t[n]) 
+a.append(sum(s)) 
+return a 
+3. 
+def middle(t): 
+t.remove(t[0]) 
+t.remove(t[len(t)-1]) 
+return t 
+4. 
+t=[1,2,3,4,5,6,7,8,9] 
+def chop(t): 
+t.remove(t[0]) 
+t.remove(t[len(t)-1]) 
+print(chop(t)) 
+5. 
+def Is_sorted(t): 
+for i in range(len(t)): 
+t.sort() 
+if t==t.sort: 
+return True 
+else: 
+return False
+6. 
+def is_anagram(word1, word2): 
+
+if ' ' in word1: 
+word1=word1.replace(' ','.') 
+if ' ' in word2: 
+word2=word2.replace(' ','.') 
+
+word1.split() 
+word2.split() 
+
+a=list(word1) 
+b=list(word2) 
+
+a.sort() 
+b.sort() 
+while '.' in a: 
+a.remove('.') 
+while '.' in b: 
+b.remove('.') 
+
+if a==b: 
+return True 
+else: 
+return False 
+7. 
+def has_duplicates(s): 
+if type(s)== str: 
+a=list(s) 
+for i in range(len(a)): 
+count=a.count(a[i]) 
+if count>1: 
+return False 
+
+return True 
+
+elif type(s)==list: 
+for i in range(len(s)): 
+count=s.count(s[i]) 
+if count>1: 
+return False 
+
+return True
